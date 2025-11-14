@@ -6,13 +6,14 @@ pipeline {
         stage('Préparation') {
             steps {
                 echo "Pipeline Jenkins lancé par Jean Martial Zedia"
-                echo "Début de l'intégration GitHub -> Jenkins 🔥"
+                echo "Code récupéré depuis GitHub via Jenkins SCM ✅"
             }
         }
 
         stage('Checkout GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/Martialzedja/jenkins-ci-cd-demo.git'
+                echo "Le code est déjà cloné par le stage Declarative: Checkout SCM."
+                echo "Aucun git clone manuel nécessaire ici."
             }
         }
 
@@ -24,19 +25,19 @@ pipeline {
 
         stage('Tests') {
             steps {
-                echo "Tests unitaires..."
+                echo "Exécution des tests unitaires..."
             }
         }
 
         stage('Package') {
             steps {
-                echo "Packaging..."
+                echo "Packaging de l'application..."
             }
         }
 
         stage('Deploiement Docker') {
             steps {
-                echo "Déploiement Docker..."
+                echo "Déploiement dans un conteneur Docker (simulation)..."
             }
         }
     }
