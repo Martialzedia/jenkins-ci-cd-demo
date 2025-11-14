@@ -1,0 +1,11 @@
+{
+  "name": "jenkins-ci-cd-demo",
+  "version": "1.0.0",
+  "description": "Mini appli de demo CI/CD pour Jenkins",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Jean Martial Zedia",
+  "license": "MIT"
+}
